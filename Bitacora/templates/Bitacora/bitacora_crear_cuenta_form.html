@@ -1,0 +1,9 @@
+{% extends 'Bitacora/index.html' %}
+{% block content %}
+<a href="{% url 'Bitacorainicio' %}">Volver a Inicio</a>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Crear Cuenta">
+</form>
+{% endblock %}

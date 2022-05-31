@@ -1,0 +1,11 @@
+{% extends 'Bitacora/index.html' %}
+{% block content %}
+<div>
+    <h1>{{object.modelo}}</h1>
+    <h3>{{object.serie}}</h3>
+    <h3>{{object.contador}}</h3>
+    <p> {{object.trabajos}} </p>
+    <h3>{{object.tecnico}}</h3>
+    <h3>{{object.finalizado}}</h3>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'Bitacora/index.html' %}
+<title>{% block title %} Ingreso {% endblock %}</title>
+{% block content %}
+<div class="container">
+    <div class="row-auto">
+    <div class="col-2">
+        <form method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+    </div>
+</div>
+{% endblock %}

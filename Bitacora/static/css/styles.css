@@ -1,0 +1,20 @@
+h1{
+    background-color: black;
+    color: orangered;
+    text-align: center;
+    padding: auto;
+}
+body{
+    background-color: rgb(181, 215, 241);
+}
+form{
+    text-align: auto;
+    color: rgb(47, 36, 48);
+}
+
+footer{    
+    background-color: black;
+    color: orange;
+    text-align: left;
+    padding: initial;
+}

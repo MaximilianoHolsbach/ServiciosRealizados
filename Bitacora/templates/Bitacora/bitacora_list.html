@@ -1,0 +1,26 @@
+{% extends 'Bitacora/index.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+  <a href="{% url 'Bitacoralogout' %}">Salir</a>
+  <a href="{% url 'BitacoraCreate' %}">Nuevo Blog</a>
+{% else %}
+  <a href="{% url 'BitacoraLogin' %}">Entrar</a>
+  <a href="{% url 'Bitacorasignup' %}">Crear Cuenta</a>
+{% endif %}
+  
+
+{% if object_list %}
+    {% for blog in object_list %}
+    <li>
+        
+        <a href="{% url 'BitacoraDetail' blog.id %}">{{blog.titulo}}</a>
+        {% if user.is_authenticated %}
+          <a href="{% url 'BitacoraDelete' blog.id %}">Borrar</a>
+          <a href="{% url 'BitacoraUpdate' blog.id %}">Actualizar</a>
+        {% endif %}
+    </li>
+    {% endfor %}
+{% else %}
+  <h1> No hay blogs</h1>
+{% endif %}
+{% endblock %}

@@ -13,8 +13,9 @@
     {% for blog in object_list %}
     <li>
         
-        <a href="{% url 'BitacoraDetail' blog.id %}">{{blog.titulo}}</a>
+        <a href="{% url 'BitacoraDetail' blog.id %}">{{Bitacora.titulo}}</a>
         {% if user.is_authenticated %}
+          <a href="{% url 'BitacoraDetail' blog.id %}">Detalles</a>
           <a href="{% url 'BitacoraDelete' blog.id %}">Borrar</a>
           <a href="{% url 'BitacoraUpdate' blog.id %}">Actualizar</a>
         {% endif %}

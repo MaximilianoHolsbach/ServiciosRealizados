@@ -2,10 +2,11 @@
 {% block content %}
 <div>
     <h1>{{object.modelo}}</h1>
-    <h3>{{object.serie}}</h3>
-    <h3>{{object.contador}}</h3>
+    <h3>Serie: </h3><a>{{object.serie}}</a>
+    <h3>Contador: </h3><a></a>{{object.contador}}</a>
+    <h3>Trabajos Realizados</h3>
     <p> {{object.trabajos}} </p>
-    <h3>{{object.tecnico}}</h3>
-    <h3>{{object.finalizado}}</h3>
+    <h3>Técnico: </h3><a></a>{{object.tecnico}}</a>
+    <h3>Finalizo: </h3><a></a>{{object.finalizado}}</a>
 </div>
 {% endblock %}
